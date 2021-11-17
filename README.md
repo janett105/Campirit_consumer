@@ -15,32 +15,32 @@
 
 브랜치 생성
 
-  $ git branch [branch 이름]
+	$ git branch [branch 이름]
 
 브랜치 이동
 
-  $ git checkout [branch이름] 
+  	$ git checkout [branch이름] 
 
 전체 add
 
-  $ git add .
+	$ git add .
 
 commit 
 
-  $ git commit -m "[commit 참조문구]" 
+  	$ git commit -m "[commit 참조문구]" 
 
 push, pull 할 때 브런치 기본 설정
 
-  $ git push --set-upstream origin [branch이름] 
+  	$ git push --set-upstream origin [branch이름] 
 
 push
 
-  $ git push -u origin [branch이름]
+  	$ git push -u origin [branch이름]
 
 
 원격 저장소와의 연결 해제
 
-$ git remote remove origin 
+	$ git remote remove origin 
 
 
 https://doorbw.tistory.com/121?category=687756
