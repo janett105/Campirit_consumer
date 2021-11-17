@@ -24,3 +24,7 @@ $git remote remove origin > 원격 저장소와의 연결 해제
 
 
 https://doorbw.tistory.com/121?category=687756
+https://wordbe.tistory.com/entry/Git-%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95-%EC%A0%95%EB%A6%ACcommit-push-pull-request-merge-%EB%93%B1
+
+오류
+https://coding-sojin2.tistory.com/102
