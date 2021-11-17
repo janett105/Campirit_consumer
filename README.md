@@ -1,4 +1,7 @@
 # 회의 전에 github에 게시
+협업 방법(김기원 읽자)
+
+https://victorydntmd.tistory.com/91
 
 ### git사용
 로컬 저장소 생성
@@ -42,6 +45,7 @@ push
 
 	$ git remote remove origin 
 
+기초
 
 https://doorbw.tistory.com/121?category=687756
 https://wordbe.tistory.com/entry/Git-%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95-%EC%A0%95%EB%A6%ACcommit-push-pull-request-merge-%EB%93%B1
