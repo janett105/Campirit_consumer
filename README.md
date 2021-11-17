@@ -3,7 +3,8 @@
 
 https://victorydntmd.tistory.com/91
 
-### git사용
+## branch이름 : frontend(backend)_[이름]
+## git사용
 로컬 저장소 생성
 
     $ git init
