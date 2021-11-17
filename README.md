@@ -2,13 +2,13 @@
 
 ### git사용
 로컬 저장소 생성
-
+'''
   $ git init
-
+'''
 유저 설정
-
+'''
   $ git user
-
+'''
 원격 저장소와 연결  
 
   $ git remote add origin [github주소]
