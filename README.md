@@ -1,9 +1,11 @@
 # 지킬 것
-1. 회의 전 github에 각자 한 것 게시
+1. 회의 전 github에 각자 한 것 자기 branch에 push
 
 2. merge 브랜치는 master
 
-3. branch이름 : frontend(backend)_[이름]
+3.  각자 해온 것 master branch에 merge하는 건 매주 정기 회의 시간에  
+
+4. branch이름 : frontend(backend)_[이름]
 
 협업 방법(김기원 읽자)
 
