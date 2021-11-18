@@ -1,9 +1,14 @@
-# 회의 전에 github에 게시
+# 지킬 것
+1. 회의 전 github에 각자 한 것 게시
+
+2. merge 브랜치는 master
+
+3. branch이름 : frontend(backend)_[이름]
+
 협업 방법(김기원 읽자)
 
 https://victorydntmd.tistory.com/91
 
-## branch이름 : frontend(backend)_[이름]
 ## git사용
 로컬 저장소 생성
 
