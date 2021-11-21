@@ -88,9 +88,17 @@ https://coding-sojin2.tistory.com/102
 	backgroundColor: "#DDDDDD",
 	
 text 줄바꿈
+
 	1. {"\n"}
 	2. {`글글글글`}
 
+background image
+
+	<ImageBackground style={styles.header} source={require('../assets/test.png')} >
+            <Text style={styles.headerText}>
+                글
+            </Text>
+        </ImageBackground>
 
 #### 기능
 버튼
