@@ -15,7 +15,7 @@ https://victorydntmd.tistory.com/91
 로컬 저장소 생성
 
     $ git init
-  
+ 
 유저 설정
 
     $ git user어쩌고인데 아 귀찮아
@@ -52,6 +52,10 @@ push
 원격 저장소와의 연결 해제
 
 	$ git remote remove origin 
+
+특정 branch clone
+
+	$ git clone -b { branch name } --single-branch { repo url }
 
 기초
 
