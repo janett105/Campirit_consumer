@@ -89,8 +89,8 @@ https://coding-sojin2.tistory.com/102
 	
 text 줄바꿈
 
-	1. {"\n"}
-	2. {`글글글글`}
+	1. 글{"\n"}글
+	2. {`글글`}
 
 background image
 
