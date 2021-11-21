@@ -69,7 +69,7 @@ https://coding-sojin2.tistory.com/102
 
 
 ## react native(ios, android 모두 가능한 기능만 사용할 것)
-styles
+####styles
 
 수직방향 정렬
 
@@ -86,8 +86,10 @@ styles
 배경색
 	
 	backgroundColor: "#DDDDDD",
-	
+
+####기능
 버튼
+
 	import { useState } from "react";
 	import { TouchableOpacity } from "react-native";
 	const App = () => {
