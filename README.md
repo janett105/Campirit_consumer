@@ -56,6 +56,20 @@ push
 특정 branch clone
 
 	$ git clone -b [branch 이름] --single-branch [원격저장소 주소]
+	
+파일 삭제
+
+	$ git rm [파일명]                //local, remote 저장소 삭제  
+	$ git rm --cached [파일명]       //remote 저장소 삭제 
+	$ git commit -m "~"
+	$ git push -u origin [branch이름]
+	
+폴더 삭제
+
+	$ git rm -rf [폴더명]/           //local, remote 저장소 삭제
+	$ git rm --cached -r [폴더명]/   //remote 저장소 삭제 
+	$ git commit -m "~"
+	$ git push -u origin [branch이름]
 
 ### 기초
 
