@@ -55,7 +55,7 @@ push
 
 특정 branch clone
 
-	$ git clone -b { branch name } --single-branch { repo url }
+	$ git clone -b [branch 이름] --single-branch [원격저장소 주소]
 
 기초
 
