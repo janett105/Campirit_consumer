@@ -94,13 +94,17 @@ text 줄바꿈
 
 background image
 
+	import { StyleSheet, ImageBackground } from 'react-native';
+	
 	<ImageBackground style={styles.header} source={require('../assets/test.png')} >
             <Text style={styles.headerText}>
                 글
             </Text>
         </ImageBackground>
 
+
 #### 기능
+
 버튼
 
 	import { useState } from "react";
