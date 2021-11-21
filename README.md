@@ -57,14 +57,22 @@ push
 
 	$ git clone -b [branch 이름] --single-branch [원격저장소 주소]
 
-기초
+### 기초
 
 https://doorbw.tistory.com/121?category=687756
 https://wordbe.tistory.com/entry/Git-%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95-%EC%A0%95%EB%A6%ACcommit-push-pull-request-merge-%EB%93%B1
 
-오류
+### 오류
+폴더 업로드 시 흰 화살표 (내부 채워지지 않은 하위 모듈 상태) : 원인- 안에 '.git'폴더 있어서, 삭제해야함
 
-https://coding-sojin2.tistory.com/102
+	$ cd  ./[오류 발생 디렉토리]
+	$ ls -al
+	$ rm -rf .git
+	$ git rm --cached . -rf
+	$ git add .
+	$ git status
+	$ git commit -a -m "~"
+	$ git push origin [branch이름]
 
 
 
