@@ -66,6 +66,7 @@ https://wordbe.tistory.com/entry/Git-%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95-%EC%A
 폴더 업로드 시 흰 화살표 (내부 채워지지 않은 하위 모듈 상태) : 원인- 안에 '.git'폴더 있어서, 삭제해야함
 
 	$ cd  ./[오류 발생 디렉토리]
+	$ git checkout [branch 이름] 
 	$ ls -al
 	$ rm -rf .git
 	$ git rm --cached . -rf
