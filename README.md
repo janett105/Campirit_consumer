@@ -65,3 +65,51 @@ https://wordbe.tistory.com/entry/Git-%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95-%EC%A
 오류
 
 https://coding-sojin2.tistory.com/102
+
+
+
+## react native(ios, android 모두 가능한 기능만 사용할 것)
+styles
+
+수직방향 정렬
+
+	justifyContent: "center",
+
+수평방향 정렬
+
+	alignItems: "center",
+
+여백
+
+	padding(Horizontal): 10,
+
+배경색
+	
+	backgroundColor: "#DDDDDD",
+	
+버튼
+	import { useState } from "react";
+	import { TouchableOpacity } from "react-native";
+	const App = () => {
+  		const [count, setCount] = useState(0);
+  		const onPress = () => setCount(prevCount => prevCount + 1);
+		return (
+			<Text>Count: {count}</Text>
+			<TouchableOpacity
+        			style={styles.button}
+        			onPress={onPress}
+      			>
+        		<Text>Press Here</Text>
+     			</TouchableOpacity>
+  		);
+	};
+	borderRadius: 5
+defaultProps
+
+navigation
+https://reactnative.dev/docs/navigation
+
+usestate
+const [저장 데이터 변수, 저장 데이터 변경 함수] = useState(저장 데이터);
+var new = [...저장 데이터 변수]      //(저장 데이터deep copy해서 사용)
+저장 데이터 변경 함수(new처리);      // 저장 데이터를 대체
