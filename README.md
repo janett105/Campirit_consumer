@@ -86,6 +86,11 @@ https://coding-sojin2.tistory.com/102
 배경색
 	
 	backgroundColor: "#DDDDDD",
+	
+text 줄바꿈
+	1. {"\n"}
+	2. {`글글글글`}
+
 
 #### 기능
 버튼
