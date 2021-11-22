@@ -158,7 +158,7 @@ background image
 defaultProps
 
 
-navigation
+### navigation
 
 https://reactnavigation.org/docs/getting-started
 
@@ -178,11 +178,11 @@ navigation.goBack()        // screen 하나 pop
 
 navigation.popToTop()      // initial screen으로 navigate
 
-	<TouchableOpacity style={styles.button} onPress = {() => navigation.navigate('변경페이지 이	름')}>
+	<TouchableOpacity style={styles.button} onPress = {() => navigation.navigate('변경페이지 이름')}>
 		<Text>여길 눌러</Text>    
         </TouchableOpacity> 
 
-usestate
+### usestate
 
 	const [저장 데이터 변수, 저장 데이터 변경 함수] = useState(저장 데이터);
 	var new = [...저장 데이터 변수]      //(저장 데이터deep copy해서 사용)
