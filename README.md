@@ -178,9 +178,35 @@ navigation.goBack()        // screen 하나 pop
 
 navigation.popToTop()      // initial screen으로 navigate
 
-	<TouchableOpacity style={styles.button} onPress = {() => navigation.navigate('변경페이지 이름')}>
-		<Text>여길 눌러</Text>    
-        </TouchableOpacity> 
+	function({navigation}) {
+		return (
+			<TouchableOpacity style={styles.button} onPress = {() => navigation.navigate('변경페이지 이름')}>
+				<Text>여길 눌러</Text>    
+        		</TouchableOpacity> 
+		)
+	}
+	
+pass params
+
+	function({navigation}) {
+		return (
+			<TouchableOpacity style={styles.button} onPress = {() => {
+				navigation.navigate('변경페이지 이름', {a: 6,
+					b: 'hi',
+				})
+				}}
+			>
+				<Text>여길 눌러</Text>    
+        		</TouchableOpacity> 
+		)
+	}            //정보 보냄
+	
+정보 받는 screen에 route 불러오고
+
+	function({route}) {
+		const { itemId, otherParam } = route.params;
+		return ()
+	}
 
 ### usestate
 
