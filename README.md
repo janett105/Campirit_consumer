@@ -205,6 +205,11 @@ pass params
 		const { itemId, otherParam } = route.params;
 		return ()
 	}            //정보 
+	
+param 초기화 : app.js에서 default 설정 
+	
+	<Stack.Screen name="startPage" component={startPage} initialParams={{ Tent:'선택 안 함', Taff : '선택 안 함' }} />
+	
 
 ### usestate
 
