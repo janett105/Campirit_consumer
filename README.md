@@ -165,8 +165,12 @@ https://reactnavigation.org/docs/getting-started
 	expo install react-native-screens react-native-safe-area-context
 	npm install @react-navigation/native-stack
 	
-navigation 불러오고, app.js navigator에 정의되어 있어야 함
-navigation.navigate 말고 navigation.push하면 같은 페이지도 여러 번 쌓아서 페이지 가져올 수 있음, 뒤로 가기 누르면 다시 하나씩 
+button 만드는 페이지에 navigation 불러오고, 
+app.js navigator에 연결하려는 screen 정의되어 있어야 함
+navigation.navigate('이동하려는 페이지')    // screen 대체
+navigation.push('이동하려는 페이지')      //screen 하나 추가
+navigation.goBack()        // screen 하나 pop
+navigation.popToTop()      // initial screen으로 navigate
 
 	<TouchableOpacity style={styles.button} onPress = {() => navigation.navigate('변경페이지 이름')}>
 		<Text>여길 눌러</Text>    
