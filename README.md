@@ -12,6 +12,13 @@
 https://victorydntmd.tistory.com/91
 
 ## git사용
+올리기
+
+	$ git checkout [branch이름] 
+	$ git add .
+	$ git commit -m "[commit 참조문구]"
+	$ git push -u origin [branch이름]
+	
 로컬 저장소 생성
 
     $ git init
