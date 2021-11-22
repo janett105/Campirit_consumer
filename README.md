@@ -1,4 +1,4 @@
-# 지킬 것
+d# 지킬 것
 1. 회의 전 github에 각자 한 것 자기 branch에 push
 
 2. merge 브랜치는 master
@@ -165,7 +165,8 @@ https://reactnavigation.org/docs/getting-started
 	expo install react-native-screens react-native-safe-area-context
 	npm install @react-navigation/native-stack
 	
-navigation 불러오고, app.js navigator에 정의되어 
+navigation 불러오고, app.js navigator에 정의되어 있어야 함
+navigation.navigate 말고 navigation.push하면 같은 페이지도 여러 번 쌓아서 페이지 가져올 수 있음, 뒤로 가기 누르면 다시 하나씩 
 
 	<TouchableOpacity style={styles.button} onPress = {() => navigation.navigate('변경페이지 이름')}>
 		<Text>여길 눌러</Text>    
