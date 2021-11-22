@@ -1,4 +1,4 @@
-d# 지킬 것
+# 지킬 것
 1. 회의 전 github에 각자 한 것 자기 branch에 push
 
 2. merge 브랜치는 master
@@ -200,13 +200,11 @@ pass params
         		</TouchableOpacity> 
 		)
 	}            //정보 보냄
-	
-정보 받는 screen에 route 불러오고
 
 	function({route}) {
 		const { itemId, otherParam } = route.params;
 		return ()
-	}
+	}            //정보 
 
 ### usestate
 
