@@ -164,6 +164,13 @@ https://reactnavigation.org/docs/getting-started
 	npm install @react-navigation/native
 	expo install react-native-screens react-native-safe-area-context
 	npm install @react-navigation/native-stack
+	
+navigation 불러오고, app.js navigator에 정의되어 
+
+	<TouchableOpacity style={styles.button} onPress = {() => navigation.navigate('변경페이지 이름')}>
+		<Text>여길 눌러</Text>    
+        </TouchableOpacity> 
+
 
 usestate
 
