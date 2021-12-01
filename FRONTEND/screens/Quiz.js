@@ -121,7 +121,6 @@ export default function Quiz({ route , navigation }) {
                     
                 </View>
             </ScrollView>
-            
             <StatusBar></StatusBar>
         </View>
     );
