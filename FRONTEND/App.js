@@ -1,27 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
 import * as React from 'react';
-import { SafeAreaView, 
-         ScrollView, 
-         ImageBackground,  
-         StyleSheet, 
-         Text, View, 
-         Button, Image,
-        TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import Quiz from './screens/Quiz.js';
+import startPage from './screens/startPage.js';
+const Stack = createNativeStackNavigator();
 
 export default function App() {
-  return (    
-<View style={styles.container}>
-  <ImageBackground
-          style={{ width: "100%", height: "100%"}}  //View를 꽉채우도록
-            source={require("./assets/images/1page/background.png")}  //이미지경로
-            resizeMode="cover" // 'cover', 'contain', 'stretch', 'repeat', 'center' 중 선택 
-            >
-    <TouchableOpacity style={styles.BButton}>
-      <Image source={require("./assets/images/1page/Button.png")}/>
-    </TouchableOpacity>
-    <Image style={styles.sign} source={require("./assets/images/1page/sign.png")}/>
-  </ImageBackground>
-</View> 
+  return (
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="startPage">
+          
+        <Stack.Screen name="startPage" component={startPage} options={{ headerShown: false }} />
+        <Stack.Screen name="Quiz" component={Quiz} options={{ headerShown: false }}/>
+        
+        </Stack.Navigator>
+        <StatusBar></StatusBar>
+      </NavigationContainer>
   );
 }
 
@@ -30,16 +27,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  BButton: {
-    marginTop: 299,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  sign: {
-  marginTop: 394,
-  marginLeft: 15,
-  alignItems: 'center',
-  justifyContent: 'center',
+    backgroundColor: 'gray'
   },
 });
