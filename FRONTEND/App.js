@@ -22,6 +22,7 @@ export default function App() {
         <Stack.Screen name="Quiz" component={Quiz} options={{ headerShown: false }}/>
         <Stack.Screen name="makekitTent" component={makekitTent} options={{ headerShown: false }}/>
         <Stack.Screen name="makekitTaff" component={makekitTaff} options={{ headerShown: false }}/>
+
         
         </Stack.Navigator>
         <StatusBar></StatusBar>
