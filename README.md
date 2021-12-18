@@ -134,7 +134,7 @@ background image
 	
 statusbar 높이 구하기
 
-	npm install --save react-native-status-bar-height
+	$npm install --save react-native-status-bar-height
 	
 	import { getStatusBarHeight } from 'react-native-status-bar-height';
 	import { StatusBar, Platform } from 'react-native';
@@ -142,6 +142,24 @@ statusbar 높이 구하기
 	const StatusBarHeight =
     		Platform.OS === 'ios' ? getStatusBarHeight(true) : StatusBar.currentHeight;
 
+custom font 적용(주의 사항 : ttf파일 들어갔을 때 맨 위에 '글꼴 이름:'에 써 있는 이름대로 파일 이름을 변경할 것)
+	
+	$expo install expo-font
+	
+	import { useFonts } from 'expo-font';
+	export default function App() {
+  		const [loaded] = useFonts({
+    		폰트 이름: require('폰트 local 저장 경로'),
+  		});
+  
+  		if (!loaded) {return null;}
+
+  	return (
+    		<View>
+      			<Text style={{ fontFamily: '폰트 이름', }}>~</Text>
+    		</View>
+  		);
+	}
 
 #### 기능
 
