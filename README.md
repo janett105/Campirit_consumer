@@ -131,6 +131,16 @@ background image
                 글
             </Text>
         </ImageBackground>
+	
+statusbar 높이 구하기
+
+	npm install --save react-native-status-bar-height
+	
+	import { getStatusBarHeight } from 'react-native-status-bar-height';
+	import { StatusBar, Platform } from 'react-native';
+
+	const StatusBarHeight =
+    		Platform.OS === 'ios' ? getStatusBarHeight(true) : StatusBar.currentHeight;
 
 
 #### 기능
