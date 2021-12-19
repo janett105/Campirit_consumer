@@ -16,7 +16,23 @@ https://victorydntmd.tistory.com/91
 picker 셀렉터 박스 사용 설치
 https://github.com/react-native-picker/picker
 
+설치 할 것
 npm install @react-native-picker/picker --save
+
+import React, {useState} from 'react';
+
+ const [selectedLanguage, setSelectedLanguage] = useState();    상태 설정
+ 
+ <Picker
+  selectedValue={selectedLanguage}
+  onValueChange={(itemValue, itemIndex) =>
+    setSelectedLanguage(itemValue)
+  }>
+  <Picker.Item label="옵션1" value="option1" />
+  <Picker.Item label="옵션2" value="option2" />
+  <Picker.Item label="옵션3" value="option3" />
+</Picker>
+ 
 
 ## git사용
 올리기
