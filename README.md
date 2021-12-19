@@ -11,6 +11,13 @@
 
 https://victorydntmd.tistory.com/91
 
+# 개발 중 추가 확장자 설치
+
+picker 셀렉터 박스 사용 설치
+https://github.com/react-native-picker/picker
+
+npm install @react-native-picker/picker --save
+
 ## git사용
 올리기
 
