@@ -206,7 +206,29 @@ custom font 적용(주의 사항 : ttf파일 들어갔을 때 맨 위에 '글꼴
 	borderRadius: 5
 	
 	
-defaultProps
+Animation
+
+	import {Animated} from 'react-native';
+	
+	export default function 화면이름(){
+		const 변수 = useRef(new Animated.Value(초기값)).current 
+   		 React.useEffect(() => {
+      			Animated.timing(
+        			변수,{
+          			toValue: 애니메이션 마지막 값,
+          			duration: 애니메이션 지속 시간,
+         		 	useNativeDriver: true,}
+      			).start();
+    		}, [변수])
+		return (
+			<Animated.Image
+                		style={[styles.movingCar, {
+                 			transform: [{ translateX: 변수 }]
+					}
+				]}
+			/>
+		);
+	}
 
 
 ### navigation
