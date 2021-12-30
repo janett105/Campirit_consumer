@@ -206,7 +206,15 @@ Animation
 			/>
 		);
 	}
-
+	
+Alert
+	import { Alert,} from 'react-native';
+	
+	Alert.alert(
+        '알림창 제목',
+        '알림창 내용',
+        [{text: '버튼1내용', onPress: () => 버튼 눌렀을 때 실행}],
+      )
 
 ### navigation
 
