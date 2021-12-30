@@ -5,7 +5,7 @@
 
 협업 방법(김기원 읽자)
 
-https://victorydntmd.tistory.com/91
+	https://victorydntmd.tistory.com/91
 
 # 개발 중 추가 확장자 설치
 
