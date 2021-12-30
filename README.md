@@ -49,9 +49,14 @@ merge하기
 	 자신의 branch 원격 저장소에 push
 	 $ git checkout master
 	 $ git merge [branch 이름]
-	 $ git push -u origin [branch이름]
+	 $ git push -u origin master
 	 둘 다 master에 push 
 	 합친 master
+	 # git checkout master
+	 # git pull origin master
+	 충돌 수정
+	 # git checkout [branch 이름]
+	 # git merge master
 
 	
 로컬 저장소 생성
