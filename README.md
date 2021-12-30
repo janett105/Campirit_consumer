@@ -1,12 +1,6 @@
 # 지킬 것
 1. 회의 전 github에 각자 한 것 자기 branch에 push
 
-2. merge 브랜치는 master
-
-3.  각자 해온 것 master branch에 merge하는 건 매주 정기 회의 시간에  
-
-4. branch이름 : frontend(backend)_[이름]
-
 협업 방법(김기원 읽자)
 
 https://victorydntmd.tistory.com/91
@@ -101,10 +95,6 @@ push
 	$ git commit -m "~"
 	$ git push -u origin [branch이름]
 
-### 기초
-
-https://doorbw.tistory.com/121?category=687756
-https://wordbe.tistory.com/entry/Git-%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95-%EC%A0%95%EB%A6%ACcommit-push-pull-request-merge-%EB%93%B1
 
 ### 오류
 폴더 업로드 시 흰 화살표 (내부 채워지지 않은 하위 모듈 상태) : 원인- 안에 '.git'폴더 있어서, 삭제해야함
@@ -124,21 +114,8 @@ https://wordbe.tistory.com/entry/Git-%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95-%EC%A
 ## react native(ios, android 모두 가능한 기능만 사용할 것)
 #### styles
 
-수직방향 정렬
-
-	justifyContent: "center",
-
-수평방향 정렬
-
+	justifyContent: "center"
 	alignItems: "center",
-
-여백
-
-	padding(Horizontal): 10,
-
-배경색
-	
-	backgroundColor: "#DDDDDD",
 	
 text 줄바꿈
 
@@ -278,6 +255,18 @@ pass params
 		const { itemId, otherParam } = route.params;
 		return ()
 	}            //정보 
+	
+pass params app.js
+
+	*app.js
+	
+	<Stack.Screen name= "화면 이름" options={{ headerShown: false }} children={
+          ({navigation}) => <화면 이름 navigation={navigation} children에서 사용할 params이름 = {app.js에서 전달할 params} />
+          }/>
+	  
+	*children 화면
+	
+	export default function 화면 이름({navigation, children에서 사용할 params이름}) {return ();}
 	
 param 초기화 : app.js에서 default 설정 
 	
