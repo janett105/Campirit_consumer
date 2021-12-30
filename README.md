@@ -26,7 +26,14 @@ import React, {useState} from 'react';
   <Picker.Item label="옵션2" value="option2" />
   <Picker.Item label="옵션3" value="option3" />
 </Picker>
- 
+
+statusbar높이 구하기( ios 위해서 )
+
+	npm install --save react-native-status-bar-height
+	
+font 설정
+
+	npm install expo-font
 
 ## git사용
 올리기
