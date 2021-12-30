@@ -208,6 +208,7 @@ Animation
 	}
 	
 Alert
+
 	import { Alert,} from 'react-native';
 	
 	Alert.alert(
