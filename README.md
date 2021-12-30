@@ -59,25 +59,9 @@ font 설정
 
 	$ git branch [branch 이름]
 
-브랜치 이동
-
-  	$ git checkout [branch이름] 
-
-전체 add
-
-	$ git add .
-
-commit 
-
-  	$ git commit -m "[commit 참조문구]" 
-
 push, pull 할 때 브런치 기본 설정
 
   	$ git push --set-upstream origin [branch이름] 
-
-push
-
-  	$ git push -u origin [branch이름]
 
 
 원격 저장소와의 연결 해제
