@@ -34,6 +34,26 @@ statusbar높이 구하기( ios 위해서 )
 font 설정
 
 	npm install expo-font
+	
+# 데이터 저장 
+
+Quiz 답변(app.js)
+
+	const[ansList, setansList] = useState(
+    	{
+      	A1:"",    //string
+     	A2:"",    //string
+      	A3:"",    //string
+      	A4:0,     //int (1 이상, 0 이면 선택 안 된 것)
+      	A5:0,	  //int (1 이상, 0 이면 선택 안 된 것)
+      	A6:0,     //int (1 이상, 0 이면 선택 안 된 것)
+      	A7:0,     //int (1 이상, 0 이면 선택 안 된 것)
+      	A8:0,     //int (1 이상, 0 이면 선택 안 된 것)
+      	A9:0,     //int (1 이상, 0 이면 선택 안 된 것)
+      	Af:0,     //int (1 이상, 0 이면 선택 안 된 것)
+    	});
+	
+물품 선택 여부, 선택한 물품 선택사항
 
 ## git사용
 올리기
@@ -118,7 +138,7 @@ push, pull 할 때 브런치 기본 설정
 
 
 ## react native(ios, android 모두 가능한 기능만 사용할 것)
-#### styles
+### 스타일
 
 	justifyContent: "center"
 	alignItems: "center",
@@ -167,7 +187,7 @@ custom font 적용(주의 사항 : ttf파일 들어갔을 때 맨 위에 '글꼴
   		);
 	}
 
-#### 기능
+### 기능
 
 버튼
 
@@ -288,15 +308,15 @@ param 초기화 : app.js에서 default 설정
 	<Stack.Screen name="startPage" component={startPage} initialParams={{ Tent:'선택 안 함', Taff : '선택 안 함' }} />
 	
 
-### usestate
+### Hook
+
+useState
 
 	const [저장 데이터 변수, 저장 데이터 변경 함수] = useState(저장 데이터);
 	var new = [...저장 데이터 변수]      //(저장 데이터deep copy해서 사용)
 	저장 데이터 변경 함수(new처리);      // 저장 데이터를 대체
 
-데이터 저장 : 물품 선택 여부, 선택한 물품 선택사항
-
-###함수
+### 함수
 
  첫 문자는 무조건 대문자 (이걸로 4시간을 쓰다니 하하하....)
 	
