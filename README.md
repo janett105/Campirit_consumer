@@ -42,6 +42,17 @@ font 설정
 	$ git add .
 	$ git commit -m "[commit 참조문구]"
 	$ git push -u origin [branch이름]
+
+merge하기
+
+	 자신의 branch에서 작업
+	 자신의 branch 원격 저장소에 push
+	 $ git checkout master
+	 $ git merge [branch 이름]
+	 $ git push -u origin [branch이름]
+	 둘 다 master에 push 
+	 합친 master
+
 	
 로컬 저장소 생성
 
