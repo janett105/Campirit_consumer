@@ -51,7 +51,6 @@ merge하기
 	 $ git merge [branch 이름]
 	 $ git push -u origin master
 	 둘 다 master에 push 
-	 합친 master
 	 # git checkout master
 	 # git pull origin master
 	 충돌 수정
