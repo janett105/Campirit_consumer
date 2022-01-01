@@ -83,7 +83,7 @@ const StatusBarHeight =
           </View>
 {/* ////////////////////////////<<<< Body : 질문, 선택지, NEXT버튼 >>>>>///////////////////////////////////////// */}
           <View style={styles.body}>
-            <Text style={styles.ansState}>10대인{"\n"}</Text>
+            <Text style={styles.ansState}>{ansList.A1}{"\n"}</Text>
             <Text style={styles.quizText}>2. 당신의 성별은 무엇인가요?</Text>
             <View style={styles.answers}>
               <View style={styles.ans}>

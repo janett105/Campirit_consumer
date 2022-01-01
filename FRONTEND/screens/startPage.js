@@ -7,7 +7,7 @@ import { SafeAreaView,
          Button, Image,
         TouchableOpacity } from 'react-native';
 
-export default function App({ route , navigation }) {
+export default function App({ navigation }) {
   return (    
 <View style={styles.container}>
   <ImageBackground

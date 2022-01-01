@@ -4,7 +4,7 @@ import { StyleSheet} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import mainPage from './screens/mainPage.js';
+import MainPage from './screens/MainPage.js';
 import QuizStart from './screens/QuizPages/QuizStart.js';
 import QuizSituation from './screens/QuizPages/QuizSituation.js';
 import Quiz1 from './screens/QuizPages/Quiz1.js';
@@ -43,7 +43,7 @@ export default function App() {
         <Stack.Navigator initialRouteName="startPage">
           
         <Stack.Screen name="startPage" component={startPage} options={{ headerShown: false }} />
-        <Stack.Screen name="mainPage" component={mainPage} options={{ headerShown: false }}/>
+        <Stack.Screen name="MainPage" component={MainPage} options={{ headerShown: false }}/>
         <Stack.Screen name="makekitTent" component={makekitTent} options={{ headerShown: false }}/>
         <Stack.Screen name="makekitTaff" component={makekitTaff} options={{ headerShown: false }}/>
         <Stack.Screen name="QuizStart" component={QuizStart} options={{ headerShown: false }}/>
