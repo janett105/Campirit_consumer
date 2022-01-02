@@ -15,14 +15,14 @@ export default function Quiz({ route, navigation }) {
         <Text>하나의 키트에는 하나의 텐트만 구매할 수 있어요!</Text>
       {/* 고치는 페이지에서 사라짐(+자동차) */}
       <TouchableOpacity style={styles.buttonNext} onPress = {() => navigation.navigate({
-        name: 'mainPage',
+        name: 'MainPage',
         params: {Tent : Tent},
         })}>
         <Text>다음</Text>
       </TouchableOpacity>
        {/* 나중에 고칠 때만 나옴  */}
       <TouchableOpacity style={styles.buttonNext} onPress = {() => navigation.navigate({
-        name: 'mainPage',
+        name: 'MainPage',
         params: {Tent : Tent},
         })}>
         <Text>X</Text>    

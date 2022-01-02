@@ -17,9 +17,9 @@ import Quiz7 from './screens/QuizPages/Quiz7.js';
 import Quiz8 from './screens/QuizPages/Quiz8.js';
 import Quiz9 from './screens/QuizPages/Quiz9.js';
 import Quizf from './screens/QuizPages/Quizf.js';
-import startPage from './screens/startPage.js';
-import makekitTent from './screens/makekitTent.js';
-import makekitTaff from './screens/makekitTaff.js';
+import StartPage from './screens/StartPage.js';
+import MakekitTent from './screens/MakekitTent.js';
+import MakeitTaff from './screens/MakeitTaff.js';
 
 const Stack = createNativeStackNavigator();
 
@@ -40,12 +40,12 @@ export default function App() {
 
   return (
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="startPage">
+        <Stack.Navigator initialRouteName="StartPage">
           
-        <Stack.Screen name="startPage" component={startPage} options={{ headerShown: false }} />
+        <Stack.Screen name="StartPage" component={StartPage} options={{ headerShown: false }} />
         <Stack.Screen name="MainPage" component={MainPage} options={{ headerShown: false }}/>
-        <Stack.Screen name="makekitTent" component={makekitTent} options={{ headerShown: false }}/>
-        <Stack.Screen name="makekitTaff" component={makekitTaff} options={{ headerShown: false }}/>
+        <Stack.Screen name="MakekitTent" component={MakekitTent} options={{ headerShown: false }}/>
+        <Stack.Screen name="MakeitTaff" component={MakeitTaff} options={{ headerShown: false }}/>
         <Stack.Screen name="QuizStart" component={QuizStart} options={{ headerShown: false }}/>
         <Stack.Screen name="QuizSituation" options={{ headerShown: false }} children={
           ({navigation}) => <QuizSituation navigation={navigation} ansList={ansList}/>
@@ -80,7 +80,6 @@ export default function App() {
         <Stack.Screen name="Quizf" options={{ headerShown: false }}children={
           ({navigation}) => <Quizf navigation={navigation} ansList={ansList} setansList={setansList}/>
           }/>
-
         </Stack.Navigator>
         <StatusBar></StatusBar>
       </NavigationContainer>
