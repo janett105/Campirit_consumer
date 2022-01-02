@@ -50,7 +50,7 @@ const StatusBarHeight =
     }
 
     const NEXT =()=>{
-      navigation.navigate('MainPage')
+      navigation.navigate('MakeKit')
 
       chosen1 ? setansList({ ...ansList, Af: 1 }) : null
       chosen2 ? setansList({ ...ansList, Af: 2 }) : null

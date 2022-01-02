@@ -7,7 +7,7 @@ import { SafeAreaView,
          Button, Image,
         TouchableOpacity } from 'react-native';
 
-export default function App({ navigation }) {
+export default function StartPage({navigation}) {
   return (    
 <View style={styles.container}>
   <ImageBackground
@@ -20,9 +20,10 @@ export default function App({ navigation }) {
     </TouchableOpacity>
     <Image style={styles.sign} source={require("../assets/images/startPage/sign.png")}/>
   </ImageBackground>
-</View> 
+</View>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
