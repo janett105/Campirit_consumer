@@ -7,22 +7,23 @@ import { SafeAreaView,
          Button, Image,
         TouchableOpacity } from 'react-native';
 
-export default function App() {
+export default function startpage({navigation}) {
   return (    
 <View style={styles.container}>
   <ImageBackground
           style={{ width: "100%", height: "100%"}}  //View를 꽉채우도록
-            source={require("./assets/images/1page/background.png")}  //이미지경로
+            source={require("../assets/images/startPage/background.png")}  //이미지경로
             resizeMode="cover" // 'cover', 'contain', 'stretch', 'repeat', 'center' 중 선택 
             >
-    <TouchableOpacity style={styles.BButton} onPress = {() => NavigationContainer.navigate('Quiz')}>
-      <Image source={require("./assets/images/1page/Button.png")}/>
+    <TouchableOpacity style={styles.BButton} onPress = {() => navigation.navigate("Quiz")}>
+      <Image source={require("../assets/images/startPage/Button.png")}/>
     </TouchableOpacity>
-    <Image style={styles.sign} source={require("./assets/images/1page/sign.png")}/>
+    <Image style={styles.sign} source={require("../assets/images/startPage/sign.png")}/>
   </ImageBackground>
-</View> 
+</View>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
