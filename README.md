@@ -21,6 +21,12 @@ font 설정
 
 	npm install expo-font
 	
+navigation
+	
+	npm install @react-navigation/native
+	expo install react-native-screens react-native-safe-area-context
+	npm install @react-navigation/native-stack
+	
 # 데이터 저장 
 
 Quiz 답변(app.js)
@@ -179,8 +185,6 @@ background image
         </ImageBackground>
 	
 statusbar 높이 구하기
-
-	$npm install --save react-native-status-bar-height
 	
 	import { getStatusBarHeight } from 'react-native-status-bar-height';
 	import { StatusBar, Platform } from 'react-native';
@@ -189,8 +193,6 @@ statusbar 높이 구하기
     		Platform.OS === 'ios' ? getStatusBarHeight(true) : StatusBar.currentHeight;
 
 custom font 적용(주의 사항 : ttf파일 들어갔을 때 맨 위에 '글꼴 이름:'에 써 있는 이름대로 파일 이름을 변경할 것)
-	
-	$expo install expo-font
 	
 	import { useFonts } from 'expo-font';
 	export default function App() {
@@ -265,12 +267,6 @@ Alert
 
 ### navigation
 
-https://reactnavigation.org/docs/getting-started
-
-	npm install @react-navigation/native
-	expo install react-native-screens react-native-safe-area-context
-	npm install @react-navigation/native-stack
-	
 button 만드는 페이지에 navigation 불러오고, 
 
 app.js navigator에 연결하려는 screen 정의되어 있어야 함
