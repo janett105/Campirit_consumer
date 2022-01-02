@@ -18,8 +18,6 @@ import Quiz8 from './screens/QuizPages/Quiz8.js';
 import Quiz9 from './screens/QuizPages/Quiz9.js';
 import Quizf from './screens/QuizPages/Quizf.js';
 import StartPage from './screens/StartPage.js';
-import MakekitTent from './screens/MakekitTent.js';
-import MakeitTaff from './screens/MakeitTaff.js';
 
 const Stack = createNativeStackNavigator();
 
@@ -44,8 +42,6 @@ export default function App() {
           
         <Stack.Screen name="StartPage" component={StartPage} options={{ headerShown: false }} />
         <Stack.Screen name="MainPage" component={MainPage} options={{ headerShown: false }}/>
-        <Stack.Screen name="MakekitTent" component={MakekitTent} options={{ headerShown: false }}/>
-        <Stack.Screen name="MakeitTaff" component={MakeitTaff} options={{ headerShown: false }}/>
         <Stack.Screen name="QuizStart" component={QuizStart} options={{ headerShown: false }}/>
         <Stack.Screen name="QuizSituation" options={{ headerShown: false }} children={
           ({navigation}) => <QuizSituation navigation={navigation} ansList={ansList}/>
