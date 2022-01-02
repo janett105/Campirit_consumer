@@ -164,7 +164,7 @@ push, pull 할 때 브런치 기본 설정
 
 
 ## react native(ios, android 모두 가능한 기능만 사용할 것)
-### 스타일
+### 스타일(windowwdth, windowheight 사용해서 스타일 크기 작성할 것)
 
 	justifyContent: "center"
 	alignItems: "center",
@@ -208,6 +208,13 @@ custom font 적용(주의 사항 : ttf파일 들어갔을 때 맨 위에 '글꼴
     		</View>
   		);
 	}
+	
+핸드폰 화면 높이, 너비 구하기 
+
+	import { Dimensions } from 'react-native';
+	
+	const windowWidth = Dimensions.get('window').width;
+	const windowHeight = Dimensions.get('window').height;
 
 ### 기능
 
