@@ -350,6 +350,8 @@ useState
 	const [저장 데이터 변수, 저장 데이터 변경 함수] = useState(저장 데이터);
 	var new = [...저장 데이터 변수]      //(저장 데이터deep copy해서 사용)
 	저장 데이터 변경 함수(new처리);      // 저장 데이터를 대체
+	
+useEffect(https://rinae.dev/posts/a-complete-guide-to-useeffect-ko)
 
 ### 함수
 
