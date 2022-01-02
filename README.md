@@ -12,22 +12,7 @@
 picker 셀렉터 박스 사용 설치
 https://github.com/react-native-picker/picker
 
-설치 할 것
-npm install @react-native-picker/picker --save
-
-import React, {useState} from 'react';
-
- const [selectedLanguage, setSelectedLanguage] = useState();    상태 설정
- 
- <Picker
-  selectedValue={selectedLanguage}
-  onValueChange={(itemValue, itemIndex) =>
-    setSelectedLanguage(itemValue)
-  }>
-  <Picker.Item label="옵션1" value="option1" />
-  <Picker.Item label="옵션2" value="option2" />
-  <Picker.Item label="옵션3" value="option3" />
-</Picker>
+	npm install @react-native-picker/picker --save	
 
 statusbar높이 구하기( ios 위해서 )
 
@@ -343,7 +328,22 @@ param 초기화 : app.js에서 default 설정
 	
 	<Stack.Screen name="startPage" component={startPage} initialParams={{ Tent:'선택 안 함', Taff : '선택 안 함' }} />
 	
+셀렉터 박스(드롭다운?)
 
+	import React, {useState} from 'react';
+
+ 	const [selectedLanguage, setSelectedLanguage] = useState();    상태 설정
+ 
+ 	<Picker
+  	selectedValue={selectedLanguage}
+  	onValueChange={(itemValue, itemIndex) =>
+    	setSelectedLanguage(itemValue)
+  	}>
+  	<Picker.Item label="옵션1" value="option1" />
+  	<Picker.Item label="옵션2" value="option2" />
+  	<Picker.Item label="옵션3" value="option3" />
+	</Picker>
+	
 ### Hook
 
 useState
