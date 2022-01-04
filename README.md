@@ -220,23 +220,14 @@ custom font 적용(주의 사항 : ttf파일 들어갔을 때 맨 위에 '글꼴
 
 버튼
 
-	import { useState } from "react";
-	import { TouchableOpacity } from "react-native";
-	const App = () => {
-  		const [count, setCount] = useState(0);
-  		const onPress = () => setCount(prevCount => prevCount + 1);
-		return (
-			<Text>Count: {count}</Text>
-			<TouchableOpacity
-        			style={styles.button}
-        			onPress={onPress}
-      			>
-        		<Text>Press Here</Text>
-     			</TouchableOpacity>
-  		);
-	};
-	borderRadius: 5
-	
+	import {Pressable,} from 'react-native';
+	export default function 페이지이름() {
+		return(
+			<Pressable style={styles.btn_Next} onPress={NEXT}>
+              			<Text style={styles.btn_nextText}>NEXT</Text>
+           		</Pressable>
+		);
+	};	
 	
 Animation
 
