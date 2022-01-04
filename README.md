@@ -7,7 +7,7 @@
 
 	https://victorydntmd.tistory.com/91
 
-# 개발 중 추가 확장자 설치
+# 개발 중 추가 확장자 설치(사용법은 밑에서 보아라)
 
 picker 셀렉터 박스 사용 설치(https://github.com/react-native-picker/picker)
 
