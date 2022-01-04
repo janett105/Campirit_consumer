@@ -358,5 +358,5 @@ useEffect(https://rinae.dev/posts/a-complete-guide-to-useeffect-ko)
 
 ### 함수
 
- 첫 문자는 무조건 대문자 (이걸로 4시간을 쓰다니 하하하....)
+ 첫 문자는 무조건 대문자 (이걸로 4시간을 쓰다니 하하하....)유감
 	
