@@ -356,6 +356,26 @@ useState
 	
 useEffect(https://rinae.dev/posts/a-complete-guide-to-useeffect-ko)
 
+### spread operator(...)
+내용 복사함
+
+	const[A, B] = useState({
+		가:0,
+		나:{
+			나ㄱ:1, 
+			나ㄴ:2,
+		}, 		
+	});
+	B({ ...A, 나: {...A.나, 나ㄴ:3}})
+	
+	>>A={
+		가:0,
+		나:{
+			나ㄱ:1, 
+			나ㄴ:3,
+		}, 
+	}
+
 ### 함수
 
  첫 문자는 무조건 대문자 (이걸로 4시간을 쓰다니 하하하....)유감
