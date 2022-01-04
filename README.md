@@ -164,7 +164,7 @@ push, pull 할 때 브런치 기본 설정
 
 
 ## react native(ios, android 모두 가능한 기능만 사용할 것)
-### 스타일(windowwdth, windowheight 사용해서 스타일 크기 작성할 것)
+### 스타일(windowwidth, windowheight 사용해서 스타일 크기 작성할 것!!!핸드폰마다 화면 크기 다 다르다!!)
 
 	justifyContent: "center"
 	alignItems: "center",
