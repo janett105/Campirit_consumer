@@ -336,6 +336,7 @@ pass params app.js
 	
 	export default function 화면 이름({navigation, children에서 사용할 params이름}) {return ();}
 	
+	
 param 초기화 : app.js에서 default 설정 
 	
 	<Stack.Screen name="startPage" component={startPage} initialParams={{ Tent:'선택 안 함', Taff : '선택 안 함' }} />
@@ -386,7 +387,9 @@ useEffect(https://rinae.dev/posts/a-complete-guide-to-useeffect-ko)
 		}, 
 	}
 
-### 함수
+### ScrollView
 
- 첫 문자는 무조건 대문자 (이걸로 4시간을 쓰다니 하하하....)유감
+nested scrollview (https://github.com/facebook/react-native/issues/21436)
+
+내부 scrollview prop으로 nestedScrollEnabled={true}
 	
