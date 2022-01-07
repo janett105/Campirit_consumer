@@ -56,7 +56,7 @@ Quiz 답변(app.js)
     const[now, setNow] = useState(0);
     setNow(now+1);
     order, now 둘 다 import 한 후 oder[now]해서 쓰기
-    navigation과 함께 데이터 보낼 때는 oder가 아닌 now 데이터 보내기
+    navigation과 함께 prop으로 데이터 보낼 때는 oder가 아닌 now 데이터 보내기{now:3} 이런식으로
 	
 스타터 키트 선택 목록(MainPage.js)
 	
