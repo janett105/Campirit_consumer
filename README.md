@@ -51,7 +51,7 @@ Quiz 답변(app.js)
       		["텐트", "타프","매트/침낭", "테이블", "체어",  "주방 용품", "난로", "에어컨", "기타용품", "감성 용품","폴딩 박스"]
     	);
 	
-현재 키트 표시(MainPage.js) : 지금 당장 makekit.js에 보여줘야 하는 물품
+현재 키트 표시(MainPage.js) : 지금 당장 makekit.js에서 화면에 보여줘야 하는 물품
 
     const[now, setNow] = useState(0);
     setNow(now+1);
