@@ -62,7 +62,7 @@ Quiz 답변(app.js)
 
    const[flow, setFlow] = useState(0);
    setFlow(flow+1);
-   makekit.js는 oder, flow, now, setFlow navigation prop으로 받은 후 order[now]으로 내용 표시하고 setFlow(flow+1);로 데이터 업데이트 하기
+   makekit.js는 oder, flow, now, setFlow navigation prop으로 받은 후 order[now]으로 내용 표시하고 setFlow(flow+1);로 데이터 업데이트 하기(mainPage로 flow보내지 말고)
 	
 스타터 키트 선택 목록(MainPage.js)
 	
