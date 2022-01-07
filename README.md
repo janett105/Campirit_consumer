@@ -52,11 +52,17 @@ Quiz 답변(app.js)
     	);
 	
 현재 키트 표시(MainPage.js)
+지금 당장 makekit.js에 보여줘야 하는 물품
 
     const[now, setNow] = useState(0);
     setNow(now+1);
-    order, now 둘 다 import 한 후 oder[now]해서 쓰기
-    navigation과 함께 prop으로 데이터 보낼 때는 oder가 아닌 now 데이터 보내기{now:3} 이런식으로
+   
+키트 만들기 전체적인 순서 표시(MainPage.js)
+전체적인 흐름만 반영(mainpage에 있는 돌아가기 버튼으로 인한 것 아니라 다음 버튼으로만 진행)
+
+   const[flow, setFlow] = useState(0);
+   setFlow(flow+1);
+   makekit.js는 oder, flow, now, setFlow navigation prop으로 받은 후 order[now]으로 내용 표시하고 setFlow(flow+1);로 데이터 업데이트 하기
 	
 스타터 키트 선택 목록(MainPage.js)
 	
