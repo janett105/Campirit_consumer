@@ -51,14 +51,12 @@ Quiz 답변(app.js)
       		["텐트", "타프","매트/침낭", "테이블", "체어",  "주방 용품", "난로", "에어컨", "기타용품", "감성 용품","폴딩 박스"]
     	);
 	
-현재 키트 표시(MainPage.js)
- : 지금 당장 makekit.js에 보여줘야 하는 물품
+현재 키트 표시(MainPage.js) : 지금 당장 makekit.js에 보여줘야 하는 물품
 
     const[now, setNow] = useState(0);
     setNow(now+1);
    
-키트 만들기 전체적인 순서 표시(MainPage.js)
- : 전체적인 흐름만 반영(mainpage에 있는 돌아가기 버튼으로 인한 것 아니라 다음 버튼으로만 진행)
+키트 만들기 전체적인 순서 표시(MainPage.js) : 전체적인 흐름만 반영(mainpage에 있는 돌아가기 버튼으로 인한 것 아니라 다음 버튼으로만 진행)
 
    const[flow, setFlow] = useState(0);
    setFlow(flow+1);
