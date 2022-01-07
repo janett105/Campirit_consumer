@@ -45,6 +45,19 @@ Quiz 답변(app.js)
       	Af:0,     //int (1~2 선택지, 0 이면 선택 안 된 것)
     	});
 	
+키트 순서 목록(MainPage.js)
+
+	const[order, setOrder] = useState(
+      		["텐트", "타프","매트/침낭", "테이블", "체어",  "주방 용품", "난로", "에어컨", "기타용품", "감성 용품","폴딩 박스"]
+    	);
+	
+현재 키트 표시(MainPage.js)
+
+    const[now, setNow] = useState(0);
+    setNow(now+1);
+    order, now 둘 다 import 한 후 oder[now]해서 쓰기
+    navigation과 함께 데이터 보낼 때는 oder가 아닌 now 데이터 보내기
+	
 스타터 키트 선택 목록(MainPage.js)
 	
 	const [kit, setKit] = React.useState({
