@@ -82,9 +82,10 @@ Quiz 답변(app.js)
     
     각 list 안에 물품 1개에 대한 object 추가
     {
-    	name: '',
-        size: '',
-        color: '',
+    name: '',    //string, 필수 항목
+        size: '',    //string,
+        color: '',    //string,
+	price:   //int, 필수 항목 
        	//사용자 선택 사항들
 	},
 	
