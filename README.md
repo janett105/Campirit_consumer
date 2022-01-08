@@ -65,38 +65,28 @@ Quiz 답변(app.js)
    	order[now]으로 내용 표시하고 setFlow(flow+1);로 데이터 업데이트 하기(mainPage로 flow보내지 말고)
 	
 스타터 키트 선택 목록(MainPage.js)
-	
-	const [kit, setKit] = React.useState({
-        텐트 : [
-            {
-                name: '짱 이쁜 텐트래',
-                size: 's',
-                color: '검정',
-                //사용자 선택 사항들
-            },
-            {
-                name: '',
-                size: 'm',
-                color: '노란색',
-                //사용자 선택 사항들
-            }
-        ],
-        타프: [
-            {
-                name: '타프1',
-                size: 's',
-                color: '검정',
-                //사용자 선택 사항들
-            },
-            {
-                name: '타프2',
-                size: 'm',
-                color: '노란색',
-            //사용자 선택 사항들
-            }
-        ],
-        //키트 상품들
+    
+    const [kit, setKit] = useState({
+        텐트 : [],
+        타프: [],
+        매트침낭:[],
+        테이블:[],
+        체어:[],
+        주방용품:[],
+        난로:[],
+        에어컨:[],
+        기타용품:[],
+        감성용품:[],
+        폴딩박스:[]
     });
+    
+    각 list 안에 물품 1개에 대한 object 추가
+    {
+    	name: '',
+        size: '',
+        color: '',
+       	//사용자 선택 사항들
+	},
 	
 물품 선택 여부, 선택한 물품 선택사항
 
