@@ -27,6 +27,11 @@ navigation
 	expo install react-native-screens react-native-safe-area-context
 	npm install @react-navigation/native-stack
 	
+expo-app-loading
+
+	expo install expo-font expo-app-loading
+
+	
 # 데이터 저장 
 
 Quiz 답변(app.js)
