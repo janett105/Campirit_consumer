@@ -31,6 +31,7 @@ const StatusBarHeight =
     setTimeout(() => {
       navigation.navigate('Quiz1');
     }, 2000);
+
     
     const [loaded] = useFonts({
       YiSunShin_B: require('../../assets/fonts/이순신돋움체B.ttf'),
@@ -71,7 +72,7 @@ const StatusBarHeight =
 }
 
 const styles = StyleSheet.create({
-  ///////////////////////////////<<<< Container : 최상위 박스 >>>>>//////////////////////////////////////  
+    ///////////////////////////////<<<< Container : 최상위 박스 >>>>>//////////////////////////////////////  
   container: {
       flex: 1,
     },
@@ -111,7 +112,5 @@ const styles = StyleSheet.create({
       justifyContent:"flex-end",
     },
     movingCar:{
-      marginBottom:-3,
-      
-    },
-  });
+      marginBottom:-windowHeight/80,
+    },});

@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
 import {Picker} from '@react-native-picker/picker';
-import {ScrollView,Text,Image, View, StyleSheet, SafeAreaView, Button, Alert} from 'react-native';
+import {ScrollView,Text,Image, View, StyleSheet, SafeAreaView, Button, Alert,Pressable,} from 'react-native';
 
 export default function StartPage({ ansList, route , navigation }) { 
   const tent1='바람막이 텐트'
@@ -9,8 +9,12 @@ export default function StartPage({ ansList, route , navigation }) {
   const tent3='바람막이 텐트'
   const [selectedLanguage, setSelectedLanguage] = useState();
 
+  const NEXT =()=>{
+    navigation.navigate('MainPage');
+  }
+
   const Selete_box = (props) =>{
-    return(
+    return( 
     <View style={styles.select_box}>
         <Image source={require("../assets/images/MakeKit/retangle.png")} style={styles.footer_selate_img}/>
           <View style={{left:10}}>
@@ -29,6 +33,8 @@ export default function StartPage({ ansList, route , navigation }) {
             <Text style={{marginTop:1,left:-50}}>{props.money}원</Text>
       </View>
     )};
+
+    console.log(ansList);
   
 return (
   <SafeAreaView>
@@ -41,6 +47,11 @@ return (
       </View>
     </View>
   <Image source={require("../assets/images/MakeKit/Top_line.png")}/>
+
+
+  <Pressable style={{backgroundColor:"tomato"}} onPress={NEXT}>
+    <Text>여긴 으아아아야</Text>
+  </Pressable>
     
 
   <ScrollView pagingEnabled style={styles.Content_list} horizontal = {true}>  

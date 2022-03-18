@@ -80,53 +80,37 @@ const StatusBarHeight =
 {/* ////////////////////////////<<<< Body : 질문, 선택지, NEXT버튼 >>>>>///////////////////////////////////////// */}
           <View style={styles.body}>
             <Text style={styles.quizText}>1. 연령대가 어떻게 되시나요?</Text>
-            <View style={styles.answers}>
-              <View style={styles.ansbundle1}>
-                <View style={styles.ans}>
-                  <Text style={{...styles.btn_Ans, backgroundColor: chosen1 ? "#FF9899" : "white"}}> </Text>
-                  <Pressable
-                    onPress={()=>{setChosen1(prev => !prev)}}
-                    hitSlop={{top: 5, bottom:50,}}>
-                    <Text style={styles.btn_ansText}>10~20대</Text>
-                  </Pressable>       
-                </View>
-                <View style={{...styles.ans, marginLeft:-windowWidth/15}}>
-                  <Text style={{...styles.btn_Ans, backgroundColor: chosen2 ? "#FF9899" : "white"}}> </Text>
-                  <Pressable
-                    onPress={()=>{setChosen2(prev => !prev)}}
-                    hitSlop={{top: 5, bottom:50,}}>
-                    <Text style={styles.btn_ansText}>30대</Text> 
-                  </Pressable> 
-                </View>
-                <View style={styles.ans}>
-                  <Text style={{...styles.btn_Ans, backgroundColor: chosen3 ? "#FF9899" : "white"}}> </Text>
-                  <Pressable
-                    onPress={()=>{setChosen3(prev => !prev)}}
-                    hitSlop={{top: 5, bottom:50,}}>
-                    <Text style={styles.btn_ansText}>40대</Text>    
-                  </Pressable> 
-                </View>
-              </View>
-              <View style={styles.ansbundle2}>
-                <View style={styles.ans}>
-                  <Text style={{...styles.btn_Ans, backgroundColor: chosen4 ? "#FF9899" : "white"}}> </Text>
-                  <Pressable
-                    onPress={()=>{setChosen4(prev => !prev)}}
-                    hitSlop={{top: 5, bottom:50,}}>
-                    <Text style={{...styles.btn_ansText, marginRight:windowWidth/5.2}}>50대</Text>    
-                  </Pressable>
-                </View>
-                <View style={styles.ans}>
-                  <Text style={{...styles.btn_Ans, backgroundColor: chosen5 ? "#FF9899" : "white"}}> </Text>
-                  <Pressable
-                    onPress={()=>{setChosen5(prev => !prev)}}
-                    hitSlop={{top: 5, bottom:50,}}>
-                    <Text style={styles.btn_ansText}>60대 이상</Text>   
-                  </Pressable>  
-                </View>
-              </View>
-              
-              
+            <View>
+              <Pressable
+                onPress={()=>{setChosen1(prev => !prev)}}
+                style={{...styles.btn_Ans, backgroundColor: chosen1 ? "#F3AE58" : "#D9D9D9"}}
+                hitSlop={{top: 5, bottom:50,}}>
+                <Text style={styles.btn_ansText}>10~20대</Text>
+              </Pressable>       
+              <Pressable
+                onPress={()=>{setChosen2(prev => !prev)}}
+                style={{...styles.btn_Ans, backgroundColor: chosen2 ? "#F3AE58" : "#D9D9D9"}}
+                hitSlop={{top: 5, bottom:50,}}>
+                <Text style={styles.btn_ansText}>30대</Text> 
+              </Pressable> 
+              <Pressable
+                onPress={()=>{setChosen3(prev => !prev)}}
+                style={{...styles.btn_Ans, backgroundColor: chosen3 ? "#F3AE58" : "#D9D9D9"}}
+                hitSlop={{top: 5, bottom:50,}}>
+                <Text style={styles.btn_ansText}>40대</Text>    
+              </Pressable> 
+              <Pressable
+                onPress={()=>{setChosen4(prev => !prev)}}
+                style={{...styles.btn_Ans, backgroundColor: chosen4 ? "#F3AE58" : "#D9D9D9"}}
+                hitSlop={{top: 5, bottom:50,}}>
+                <Text style={styles.btn_ansText}>50대</Text>    
+              </Pressable>
+              <Pressable
+                onPress={()=>{setChosen5(prev => !prev)}}
+                style={{...styles.btn_Ans, backgroundColor: chosen5 ? "#F3AE58" : "#D9D9D9"}}
+                hitSlop={{top: 5, bottom:50,}}>
+                <Text style={styles.btn_ansText}>60대 이상</Text>   
+              </Pressable>  
             </View>
             <Pressable style={styles.btn_Next} onPress={CanNEXT} >
               <Text style={styles.btn_nextText}>NEXT</Text>
@@ -193,38 +177,15 @@ const styles = StyleSheet.create({
       marginBottom: windowHeight*5/8/17,
       marginLeft :-windowWidth/4,
     },
-    answers:{
-      // backgroundColor:"blue",
-      marginHorizontal:windowWidth/10,
-
-      alignSelf:"stretch",
-    },
-    ansbundle1:{
-      // backgroundColor:"red",
-      marginBottom:windowWidth/20,
-
-      flexDirection: "row",
-      justifyContent:"space-between",
-    },
-    ansbundle2:{
-      // backgroundColor:"green",
-
-      flexDirection: "row",
-    },
-    ans:{
-      // backgroundColor:"white",
-
-      flexDirection: "row",
-    },
     btn_Ans:{
-      borderRadius:35,
-      width:20,
-      height:20,
-      borderColor: "#FF9899",
-      borderWidth: 2,
+      borderRadius:8,
+      width:windowWidth/2.5,
+      height:windowHeight/32,
 
-      marginRight:6,
-      marginTop:3,
+      marginBottom:windowHeight/60,
+
+      justifyContent:'center',
+      alignItems:'center',
     },
     btn_ansText:{
       fontWeight:"400",
@@ -237,7 +198,7 @@ const styles = StyleSheet.create({
       borderRadius:13,
       backgroundColor: "#FFD300",
 
-      marginTop:windowHeight*5/8/3,
+      marginTop:windowHeight/20,
       marginBottom:-windowHeight/20,
 
       justifyContent:"center",
@@ -261,7 +222,7 @@ const styles = StyleSheet.create({
       justifyContent:"flex-end", 
     },
     movingCar:{
-      marginBottom:-5,
+      marginBottom:-windowHeight/80,
       marginRight:windowWidth-100,
     },
     processText:{

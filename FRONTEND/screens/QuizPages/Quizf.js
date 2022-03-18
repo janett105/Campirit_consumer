@@ -65,8 +65,6 @@ const StatusBarHeight =
       return null;
     }
 
-    console.log(ansList);
-
     return (
         <View style={styles.container}>
 {/* ///////////////////////////////<<<< Header : 파란물결 >>>>>////////////////////////////////////// */}
@@ -90,23 +88,19 @@ const StatusBarHeight =
                 공간이 필요하다고 생각하시나요?
               </Text>
             </View>
-            <View style={styles.answers}>
-              <View style={styles.ans}>
-                  <Text style={{...styles.btn_Ans, backgroundColor: chosen1 ? "#FF9899" : "white"}}> </Text>
-                  <Pressable
-                    onPress={()=>{setChosen1(prev => !prev)}}
-                    hitSlop={{top: 5, bottom:50,}}>
-                    <Text style={styles.btn_ansText}>저기서 요리하고, 먹고, 쉬면 좋겠다</Text>    
-                  </Pressable>
-              </View>
-              <View style={styles.ans}>
-                  <Text style={{...styles.btn_Ans, backgroundColor: chosen2 ? "#FF9899" : "white"}}> </Text>
-                  <Pressable
-                    onPress={()=>{setChosen2(prev => !prev)}}
-                    hitSlop={{top: 5, bottom:50,}}>
-                    <Text style={styles.btn_ansText}>굳이..?</Text>    
-                  </Pressable>
-              </View>
+            <View>
+              <Pressable
+                onPress={()=>{setChosen1(prev => !prev)}}
+                style={{...styles.btn_Ans, backgroundColor: chosen1 ? "#F3AE58" : "#D9D9D9"}}
+                hitSlop={{top: 5, bottom:50,}}>
+                <Text style={styles.btn_ansText}>여기서 요리하고 놀고 먹으면 되겠다.</Text>
+              </Pressable>       
+              <Pressable
+                onPress={()=>{setChosen2(prev => !prev)}}
+                style={{...styles.btn_Ans, backgroundColor: chosen2 ? "#F3AE58" : "#D9D9D9"}}
+                hitSlop={{top: 5, bottom:50,}}>
+                <Text style={styles.btn_ansText}>굳이..?</Text> 
+              </Pressable> 
             </View>
             <Pressable style={styles.btn_Next} onPress={CanNEXT}>
               <Text style={styles.btn_nextText}>NEXT</Text>
@@ -167,9 +161,6 @@ body:{
   alignItems:'center',
   justifyContent: "center",
 },
-TentSpace:{
-
-},
 FocusLine:{
   marginTop:-windowHeight/5,
   marginBottom:windowHeight*5/8/17,
@@ -186,27 +177,15 @@ quizText:{
   fontSize:20,
   fontFamily:"Roboto",
 },
-answers:{
-  // backgroundColor:"blue",
-  marginHorizontal:windowWidth/10,
-  alignSelf:"stretch",
-},
-ans:{
-  backgroundColor:"white",
-  
-  marginBottom: windowHeight/32,
-
-  flexDirection: "row",
-},
 btn_Ans:{
-  borderRadius:35,
-  width:20,
-  height:20,
-  borderColor: "#FF9899",
-  borderWidth: 2,
+  borderRadius:8,
+  width:windowWidth/1.4,
+  height:windowHeight/32,
 
-  marginRight:6,
-  marginTop:3,
+  marginBottom:windowHeight/30,
+
+  justifyContent:'center',
+  alignItems:'center',
 },
 btn_ansText:{
   fontWeight:"400",
@@ -219,8 +198,8 @@ btn_Next:{
   height:windowHeight*5/8/12,
   borderRadius:13,
 
-  marginTop:windowHeight/19,
-  marginBottom:windowHeight/11,
+  marginTop:windowHeight/10,
+  marginBottom:windowHeight/15,
 
   justifyContent:"center",
   alignItems:"center",
@@ -243,7 +222,7 @@ process:{
   justifyContent:"flex-end",
 },
 movingCar:{
-  marginBottom:-3,
+  marginBottom:-windowHeight/80,
   marginRight:windowWidth-110,
 },
 processText:{

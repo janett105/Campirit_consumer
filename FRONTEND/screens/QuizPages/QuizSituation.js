@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
       justifyContent:"flex-end",
     },
     movingCar:{
-      marginBottom:-3,
+      marginBottom:-windowHeight/80,
       
     },
   });

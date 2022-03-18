@@ -32,7 +32,7 @@ export default function App() {
       A5:0,
       A6:0,
       A7:0,
-      A8:0,
+      A8:[],
       A9:0,
       Af:0,
     });

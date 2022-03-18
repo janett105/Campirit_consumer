@@ -23,7 +23,6 @@ const StatusBarHeight =
     const [chosen2, setChosen2] = useState(false);
     const [chosen3, setChosen3] = useState(false);
     const [chosen4, setChosen4] = useState(false);
-    const [chosen5, setChosen5] = useState(false);
 
     const Bus = useRef(new Animated.Value(84)).current 
     useEffect(() => {
@@ -35,34 +34,35 @@ const StatusBarHeight =
       ).start();
     }, [Bus])
 
-    const CanNEXT = () =>{
-      let num = 0;
+    // const CanNEXT = () =>{
+    //   let num = 0;
   
-      chosen1==true ? (num += 1) : null;
-      chosen2==true ? (num += 1) : null;
-      chosen3==true ? (num += 1) : null;
-      chosen4==true ? (num += 1) : null;
-      chosen5==true ? (num += 1) : null;
+    //   chosen1==true ? (num += 1) : null;
+    //   chosen2==true ? (num += 1) : null;
+    //   chosen3==true ? (num += 1) : null;
+    //   chosen4==true ? (num += 1) : null;
   
-      num == 1 ? NEXT() : OnemoreTime();
-    }   
+    //   num == 1 ? NEXT() : OnemoreTime();
+    // }   
   
-    const OnemoreTime = () => {
-      Alert.alert(
-        '',
-        '한 가지만 선택해주세요',
-        [{text: '다시 고르기', onPress: () => null}],
-      )
-    }
+    // const OnemoreTime = () => {
+    //   Alert.alert(
+    //     '',
+    //     '한 가지만 선택해주세요',
+    //     [{text: '다시 고르기', onPress: () => null}],
+    //   )
+    // }
 
     const NEXT =()=>{
       navigation.navigate('Quiz9')
 
-      chosen1 ? setansList({ ...ansList, A8: 1 }) : null
-      chosen2 ? setansList({ ...ansList, A8: 2 }) : null
-      chosen3 ? setansList({ ...ansList, A8: 3 }) : null
-      chosen4 ? setansList({ ...ansList, A8: 4 }) : null
-      chosen5 ? setansList({ ...ansList, A8: 5 }) : null
+      let ch = []
+      chosen1 ? ch = [...ch, 1] : null
+      chosen2 ? ch = [...ch, 2] : null
+      chosen3 ? ch = [...ch, 3] : null
+      chosen4 ? ch = [...ch, 4] : null
+
+      setansList({ ...ansList, A8: [0, ...ch] })
     }
 
     const [loaded] = useFonts({
@@ -84,50 +84,38 @@ const StatusBarHeight =
           </View>
 {/* ////////////////////////////<<<< Body : 질문, 선택지, NEXT버튼 >>>>>///////////////////////////////////////// */}
           <View style={styles.body}>
+            <Text style={styles.plusText}>
+              중복 선택 가능해요 ! {'\n'}
+              해당 사항 없을 시 바로 NEXT버튼을 눌러주세요
+            </Text>
             <Text style={styles.quizText}>5. 이 계절만큼은 캠핑을 못 가겠다</Text>
-            <View style={styles.answers}>
-              <View style={styles.ans}>
-                  <Text style={{...styles.btn_Ans, backgroundColor: chosen1 ? "#FF9899" : "white"}}> </Text>
-                  <Pressable
-                    onPress={()=>{setChosen1(prev => !prev)}}
-                    hitSlop={{top: 5, bottom:50,}}>
-                    <Text style={styles.btn_ansText}>봄 : 나는 꽃가루 알레르기가 있어</Text>
-                  </Pressable>   
-              </View>
-              <View style={styles.ans}>
-                  <Text style={{...styles.btn_Ans, backgroundColor: chosen2 ? "#FF9899" : "white"}}> </Text>
-                  <Pressable
-                    onPress={()=>{setChosen2(prev => !prev)}}
-                    hitSlop={{top: 5, bottom:50,}}>
-                    <Text style={styles.btn_ansText}>여름 : 덥고 땀나;;싫어</Text>    
-                  </Pressable>
-              </View>
-              <View style={styles.ans}>
-                  <Text style={{...styles.btn_Ans, backgroundColor: chosen3 ? "#FF9899" : "white"}}> </Text>
-                  <Pressable
-                    onPress={()=>{setChosen3(prev => !prev)}}
-                    hitSlop={{top: 5, bottom:50,}}>
-                    <Text style={styles.btn_ansText}>가을 : 쌀쌀한 게 마음에 안들어</Text>    
-                  </Pressable>
-              </View>
-              <View style={styles.ans}>
-                  <Text style={{...styles.btn_Ans, backgroundColor: chosen4 ? "#FF9899" : "white"}}> </Text>
-                  <Pressable
-                    onPress={()=>{setChosen4(prev => !prev)}}
-                    hitSlop={{top: 5, bottom:50,}}>
-                    <Text style={styles.btn_ansText}>겨울 : 너무 추워, 집이 최고야!</Text>    
-                  </Pressable>
-              </View>
-              <View style={styles.ans}>
-                  <Text style={{...styles.btn_Ans, backgroundColor: chosen5 ? "#FF9899" : "white"}}> </Text>
-                  <Pressable
-                    onPress={()=>{setChosen5(prev => !prev)}}
-                    hitSlop={{top: 5, bottom:50,}}>
-                    <Text style={styles.btn_ansText}>난 모든 계절에 캠핑을 즐길 거야~</Text>    
-                  </Pressable>
-              </View>
+            <View>
+              <Pressable
+                onPress={()=>{setChosen1(prev => !prev)}}
+                style={{...styles.btn_Ans, backgroundColor: chosen1 ? "#F3AE58" : "#D9D9D9"}}
+                hitSlop={{top: 5, bottom:50,}}>
+                <Text style={styles.btn_ansText}>봄: 나는 꽃가루 알레르기가 있어</Text>
+              </Pressable>       
+              <Pressable
+                onPress={()=>{setChosen2(prev => !prev)}}
+                style={{...styles.btn_Ans, backgroundColor: chosen2 ? "#F3AE58" : "#D9D9D9"}}
+                hitSlop={{top: 5, bottom:50,}}>
+                <Text style={styles.btn_ansText}>여름: 덥고 땀나;; 싫어</Text> 
+              </Pressable> 
+              <Pressable
+                onPress={()=>{setChosen3(prev => !prev)}}
+                style={{...styles.btn_Ans, backgroundColor: chosen3 ? "#F3AE58" : "#D9D9D9"}}
+                hitSlop={{top: 5, bottom:50,}}>
+                <Text style={styles.btn_ansText}>가을: 쌀쌀한게 마음에 안들어</Text>    
+              </Pressable> 
+              <Pressable
+                onPress={()=>{setChosen4(prev => !prev)}}
+                style={{...styles.btn_Ans, backgroundColor: chosen4 ? "#F3AE58" : "#D9D9D9"}}
+                hitSlop={{top: 5, bottom:50,}}>
+                <Text style={styles.btn_ansText}>겨울: 너무 추워, 집이 최고야!</Text>    
+              </Pressable> 
             </View>
-            <Pressable style={styles.btn_Next} onPress={CanNEXT}>
+            <Pressable style={styles.btn_Next} onPress={NEXT}>
               <Text style={styles.btn_nextText}>NEXT</Text>
             </Pressable>
           </View>
@@ -185,6 +173,13 @@ body:{
   alignItems:'center',
   justifyContent: "center",
 },
+plusText:{
+  fontWeight:"700",
+  fontSize:14,
+  fontFamily:"Roboto",
+
+  marginLeft:-windowWidth/5,
+},  
 quizText:{
   // backgroundColor:"gray",
   fontWeight:"700",
@@ -194,27 +189,15 @@ quizText:{
   marginBottom: windowHeight*5/8/17,
   marginLeft :-windowWidth/5,
 },
-answers:{
- // backgroundColor:"blue",
- marginHorizontal:windowWidth/10,
-
- alignSelf:"stretch",
-},
-ans:{
-  // backgroundColor:"white",
-  marginBottom: windowHeight/32,
-
-  flexDirection: "row",
-},
 btn_Ans:{
-  borderRadius:35,
-  width:20,
-  height:20,
-  borderColor: "#FF9899",
-  borderWidth: 2,
+  borderRadius:8,
+  width:windowWidth/1.4,
+  height:windowHeight/32,
 
-  marginRight:6,
-  marginTop:3,
+  marginBottom:windowHeight/60,
+
+  justifyContent:'center',
+  alignItems:'center',
 },
 btn_ansText:{
   fontWeight:"400",
@@ -222,13 +205,13 @@ btn_ansText:{
   fontFamily:"Roboto",
 },
 btn_Next:{
-  backgroundColor:'#FFD300',
   width:windowWidth/1.8,
   height:windowHeight*5/8/12,
   borderRadius:13,
+  backgroundColor: "#FFD300",
 
   marginTop:windowHeight/20,
-  marginBottom:-windowHeight/30,
+  marginBottom:-windowHeight/20,
 
   justifyContent:"center",
   alignItems:"center",
@@ -251,7 +234,7 @@ process:{
   justifyContent:"flex-end",
 },
 movingCar:{
-  marginBottom:-3,
+  marginBottom:-windowHeight/80,
   marginRight:windowWidth-110,
 },
 processText:{

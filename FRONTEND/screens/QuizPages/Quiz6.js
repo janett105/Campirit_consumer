@@ -76,24 +76,19 @@ const StatusBarHeight =
           <View style={styles.body}>
             <Text style={styles.plusText}>차박: [車泊] 여행할 때에 자동차에서 잠을 자고 머무름.</Text>
             <Text style={styles.quizText}>3. 차박을 할 예정이다</Text>
-            <View style={styles.answers}>
-              <View style={styles.ans}>
-                  <Text style={{...styles.btn_Ans, backgroundColor: chosen1 ? "#FF9899" : "white"}}> </Text>
-                  <Pressable
-                    onPress={()=>{setChosen1(prev => !prev)}}
-
-                    hitSlop={{top: 5, bottom:50,}}>
-                    <Text style={styles.btn_ansText}>차에서 자는 갬성이 있지</Text>    
-                  </Pressable>
-              </View>
-              <View style={styles.ans}>
-                  <Text style={{...styles.btn_Ans, backgroundColor: chosen2 ? "#FF9899" : "white"}}> </Text>
-                  <Pressable
-                    onPress={()=>{setChosen2(prev => !prev)}}
-                    hitSlop={{top: 5, bottom:50,}}>
-                    <Text style={styles.btn_ansText}>차보다는 텐트에서 자고 싶어</Text>    
-                  </Pressable>
-              </View>
+            <View>
+              <Pressable
+                onPress={()=>{setChosen1(prev => !prev)}}
+                style={{...styles.btn_Ans, backgroundColor: chosen1 ? "#F3AE58" : "#D9D9D9"}}
+                hitSlop={{top: 5, bottom:50,}}>
+                <Text style={styles.btn_ansText}>차에서 자는 갬성이 있지</Text>
+              </Pressable>       
+              <Pressable
+                onPress={()=>{setChosen2(prev => !prev)}}
+                style={{...styles.btn_Ans, backgroundColor: chosen2 ? "#F3AE58" : "#D9D9D9"}}
+                hitSlop={{top: 5, bottom:50,}}>
+                <Text style={styles.btn_ansText}>차보다는 텐트에서 자고 싶어</Text> 
+              </Pressable> 
             </View>
             <Pressable style={styles.btn_Next} onPress={CanNEXT}>
               <Text style={styles.btn_nextText}>NEXT</Text>
@@ -169,27 +164,15 @@ quizText:{
   marginBottom: windowHeight*5/8/17,
   marginLeft :-windowWidth/2.4,
 },
-answers:{
-  // backgroundColor:"blue",
-  marginHorizontal:windowWidth/10,
-
-  alignSelf:"stretch",
-},
-ans:{
-  // backgroundColor:"white",
-  marginBottom: windowHeight/32,
-
-  flexDirection: "row",
-},
 btn_Ans:{
-  borderRadius:35,
-  width:20,
-  height:20,
-  borderColor: "#FF9899",
-  borderWidth: 2,
+  borderRadius:8,
+  width:windowWidth/1.4,
+  height:windowHeight/32,
 
-  marginRight:6,
-  marginTop:3,
+  marginBottom:windowHeight/30,
+
+  justifyContent:'center',
+  alignItems:'center',
 },
 btn_ansText:{
   fontWeight:"400",
@@ -226,7 +209,7 @@ process:{
   justifyContent:"flex-end",
 },
 movingCar:{
-  marginBottom:-3,
+  marginBottom:-windowHeight/80,
   marginRight:windowWidth-110,
 },
 processText:{

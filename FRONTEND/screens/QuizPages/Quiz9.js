@@ -79,31 +79,25 @@ const StatusBarHeight =
 {/* ////////////////////////////<<<< Body : 질문, 선택지, NEXT버튼 >>>>>///////////////////////////////////////// */}
           <View style={styles.body}>
             <Text style={styles.quizText}>6. 캠핑에서의 전기 사용</Text>
-            <View style={styles.answers}>
-              <View style={styles.ans}>
-                  <Text style={{...styles.btn_Ans, backgroundColor: chosen1 ? "#FF9899" : "white"}}> </Text>
-                  <Pressable
-                    onPress={()=>{setChosen1(prev => !prev)}}
-                    hitSlop={{top: 5, bottom:50,}}>
-                    <Text style={styles.btn_ansText}>캠핑에서 전기는 사치지..ㅠ</Text>    
-                  </Pressable>
-              </View>
-              <View style={styles.ans}>
-                  <Text style={{...styles.btn_Ans, backgroundColor: chosen2 ? "#FF9899" : "white"}}> </Text>
-                  <Pressable
-                    onPress={()=>{setChosen2(prev => !prev)}}
-                    hitSlop={{top: 5, bottom:50,}}>
-                    <Text style={styles.btn_ansText}>발전기를 사야 하더라도 전기는 놓칠 수 없어</Text>    
-                  </Pressable>
-              </View>
-              <View style={styles.ans}>
-                  <Text style={{...styles.btn_Ans, backgroundColor: chosen3 ? "#FF9899" : "white"}}> </Text>
-                  <Pressable
-                    onPress={()=>{setChosen3(prev => !prev)}}
-                    hitSlop={{top: 5, bottom:50,}}>
-                    <Text style={styles.btn_ansText}>유료 캠핑장에는 전기가 있는데, 왜 고민해?</Text>    
-                  </Pressable>
-              </View>
+            <View>
+              <Pressable
+                onPress={()=>{setChosen1(prev => !prev)}}
+                style={{...styles.btn_Ans, backgroundColor: chosen1 ? "#F3AE58" : "#D9D9D9"}}
+                hitSlop={{top: 5, bottom:50,}}>
+                <Text style={styles.btn_ansText}>캠핑에서 전기는 사치지</Text>
+              </Pressable>       
+              <Pressable
+                onPress={()=>{setChosen2(prev => !prev)}}
+                style={{...styles.btn_Ans, backgroundColor: chosen2 ? "#F3AE58" : "#D9D9D9"}}
+                hitSlop={{top: 5, bottom:50,}}>
+                <Text style={styles.btn_ansText}>발전기를 사서라도 전기는 잃을 수 없어</Text> 
+              </Pressable> 
+              <Pressable
+                onPress={()=>{setChosen3(prev => !prev)}}
+                style={{...styles.btn_Ans, backgroundColor: chosen3 ? "#F3AE58" : "#D9D9D9"}}
+                hitSlop={{top: 5, bottom:50,}}>
+                <Text style={styles.btn_ansText}>캠핑장에 전기가 있는데, 왜 고민해?</Text>    
+              </Pressable> 
             </View>
             <Pressable style={styles.btn_Next} onPress={CanNEXT}>
               <Text style={styles.btn_nextText}>NEXT</Text>
@@ -172,28 +166,15 @@ quizText:{
   marginBottom: windowHeight*5/8/17,
   marginLeft :-windowWidth/2.5,
 },
-answers:{
-  // backgroundColor:"blue",
-  marginHorizontal:windowWidth/10,
-
-  justifyContent: "space-evenly",
-  alignSelf:"stretch",
-},
-ans:{
-  // backgroundColor:"white",
-  marginBottom: windowHeight/32,
-
-  flexDirection: "row",
-},
 btn_Ans:{
-  borderRadius:35,
-  width:20,
-  height:20,
-  borderColor: "#FF9899",
-  borderWidth: 2,
+  borderRadius:8,
+  width:windowWidth/1.4,
+  height:windowHeight/32,
 
-  marginRight:6,
-  marginTop:3,
+  marginBottom:windowHeight/30,
+
+  justifyContent:'center',
+  alignItems:'center',
 },
 btn_ansText:{
   fontWeight:"400",
@@ -206,8 +187,8 @@ btn_Next:{
   height:windowHeight*5/8/12,
   borderRadius:13,
 
-  marginTop:windowHeight/9,
-  marginBottom:-windowHeight/20,
+  marginTop:windowHeight/10,
+  marginBottom:-windowHeight/25,
 
   justifyContent:"center",
   alignItems:"center",
@@ -230,7 +211,7 @@ process:{
   justifyContent:"flex-end",
 },
 movingCar:{
-  marginBottom:-3,
+  marginBottom:-windowHeight/80,
   marginRight:windowWidth-110,
 },
 processText:{

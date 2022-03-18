@@ -89,31 +89,25 @@ const StatusBarHeight =
               <Text style={styles.quizText}>당신은 몇 명이서{"\n"}
               캠핑을 떠날 예정인가요?</Text>
             </View>
-            <View style={styles.answers}>
-              <View style={styles.ans}>
-                  <Text style={{...styles.btn_Ans, backgroundColor: chosen1 ? "#FF9899" : "white"}}> </Text>
-                  <Pressable
-                    onPress={()=>{setChosen1(prev => !prev)}}
-                    hitSlop={{top: 5, bottom:50,}}>
-                     <Text style={styles.btn_ansText}>1~2명 ✌️‍‍👫</Text>
-                  </Pressable>   
-              </View>
-              <View style={styles.ans}>
-                  <Text style={{...styles.btn_Ans, backgroundColor: chosen2 ? "#FF9899" : "white"}}></Text>
-                  <Pressable
-                    onPress={()=>{setChosen2(prev => !prev)}}
-                    hitSlop={{top: 5, bottom:50,}}>
-                    <Text style={styles.btn_ansText}>3~4명 👨‍👩‍‍👧‍👦</Text>
-                  </Pressable>
-              </View>
-              <View style={styles.ans}>
-                  <Text style={{...styles.btn_Ans, backgroundColor: chosen3 ? "#FF9899" : "white"}}> </Text>
-                  <Pressable
-                    onPress={()=>{setChosen3(prev => !prev)}}
-                    hitSlop={{top: 5, bottom:50,}}>
-                    <Text style={styles.btn_ansText}>5명 이상 🤚‍</Text>
-                  </Pressable>
-              </View>
+            <View>
+              <Pressable
+                onPress={()=>{setChosen1(prev => !prev)}}
+                style={{...styles.btn_Ans, backgroundColor: chosen1 ? "#F3AE58" : "#D9D9D9"}}
+                hitSlop={{top: 5, bottom:50,}}>
+                <Text style={styles.btn_ansText}>1~2명 ✌️‍‍👫</Text>
+              </Pressable>       
+              <Pressable
+                onPress={()=>{setChosen2(prev => !prev)}}
+                style={{...styles.btn_Ans, backgroundColor: chosen2 ? "#F3AE58" : "#D9D9D9"}}
+                hitSlop={{top: 5, bottom:50,}}>
+                <Text style={styles.btn_ansText}>3~4명 👨‍👩‍‍👧‍👦</Text> 
+              </Pressable> 
+              <Pressable
+                onPress={()=>{setChosen3(prev => !prev)}}
+                style={{...styles.btn_Ans, backgroundColor: chosen3 ? "#F3AE58" : "#D9D9D9"}}
+                hitSlop={{top: 5, bottom:50,}}>
+                <Text style={styles.btn_ansText}>5명 이상 🤚‍</Text>    
+              </Pressable> 
             </View>
             <Pressable style={styles.btn_Next} onPress={CanNEXT}>
               <Text style={styles.btn_nextText}>NEXT</Text>
@@ -194,28 +188,15 @@ quizText:{
   fontSize:20,
   fontFamily:"Roboto",
 },
-answers:{
-  // backgroundColor:"blue",
-  marginHorizontal:windowWidth/10,
-
-  justifyContent: "space-evenly",
-  alignSelf:"stretch",
-},
-ans:{
-  // backgroundColor:"white",
-  marginBottom: windowHeight/32,
-
-  flexDirection: "row",
-},
 btn_Ans:{
-  borderRadius:35,
-  width:20,
-  height:20,
-  borderColor: "#FF9899",
-  borderWidth: 2,
+  borderRadius:8,
+  width:windowWidth/2.5,
+  height:windowHeight/32,
 
-  marginRight:6,
-  marginTop:3,
+  marginBottom:windowHeight/30,
+
+  justifyContent:'center',
+  alignItems:'center',
 },
 btn_ansText:{
   fontWeight:"400",
@@ -223,13 +204,13 @@ btn_ansText:{
   fontFamily:"Roboto",
 },
 btn_Next:{
-  backgroundColor:'#FFD300',
+  backgroundColor: "#FFD300",
   width:windowWidth/1.8,
   height:windowHeight*5/8/12,
   borderRadius:13,
 
   marginTop:windowHeight/10,
-  // marginBottom:-windowHeight*5/8/5,
+  marginBottom:-windowHeight/25,
 
   justifyContent:"center",
   alignItems:"center",
@@ -252,7 +233,7 @@ process:{
   justifyContent:"flex-end",
 },
 movingCar:{
-  marginBottom:-3,
+  marginBottom:-windowHeight/80,
   marginRight:windowWidth-110,
 },
 processText:{
